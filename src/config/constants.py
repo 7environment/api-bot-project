@@ -1,1 +1,1 @@
-BASE_NODE_URL = "https://friend-api-test.onrender.com"
+BASE_NODE_URL = "http://localhost:3000"

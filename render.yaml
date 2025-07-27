@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: my-fastapi-app
-    runtime: python
-    env: production
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    preDeploy: alembic upgrade head
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
