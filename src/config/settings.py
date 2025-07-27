@@ -1,0 +1,13 @@
+from os import getenv
+from dotenv import load_dotenv
+
+class settings:
+    def __init__(self):
+        load_dotenv()
+        self.BOT_TOKEN = getenv("BOT_TOKEN")
+        self.DB_HOST = getenv("DB_HOST")
+        self.DB_PORT = getenv("DB_PORT")
+        self.DB_USER = getenv("DB_USER")
+        self.DB_PASS = getenv("DB_PASS")
+        self.DB_NAME = getenv("DB_NAME")
+        self.DATABASE_URL_asyncpg = f"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
